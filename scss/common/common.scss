@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: $gray1;
+  }
+
+  .form-group {
+    border: 1px solid $gray4;
+    max-height: 60px;
+    border-radius: 8px;
+    position: relative;
+    padding: 5px 0;
+    margin-right: 30px;
+
+    .help-circle {
+      cursor: pointer;
+      position: absolute;
+      display: block;
+      top: 0;
+      right: -30px;
+      background: url("images/help-circle-contained-filled.svg") no-repeat center;
+      width: 24px;
+      height: 24px;
+
+      p {
+        display: none;
+        color: $gray1;
+
+      }
+    }
+
+    .help-circle:hover {
+      p {
+        display: block;
+        background-color: $gray0;
+        max-width: 450px;
+        width: 450px;
+        margin-left: 40px;
+        padding: 8px 10px;
+        font-size: 12px;
+        border-radius: 4px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -5px;
+          width: 6px;
+          height: 14px;
+          background: url("images/help-circle-flag.svg") no-repeat center;
+        }
+
+        span {
+          display: flex;
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .form-text-area,
+    .form-control {
+      border: none;
+      width: 100%;
+      padding: 0 12px;
+    }
+
+    .form-control {
+      height: 50px;
+    }
+
+    .form-label {
+      position: absolute;
+      top: 21px;
+      left: 12px;
+      color: $gray2;
+    }
+    .form-file-delete {
+      display: none;
+    }
+    .form-file-delete,
+    .form-clear {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      color: $gray3;
+      background: url("images/icon-close.svg") no-repeat center;
+      width: 14px;
+      height: 14px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .invalid-feedback {
+      display: none;
+    }
+
+
+    .invalid-feedback,
+    .has-error {
+      color: $red;
+    }
+
+    &.has-error {
+      border: 1px solid $red;
+      margin-bottom: 40px;
+
+      .invalid-feedback {
+        display: block;
+        position: relative;
+        bottom: -20px;
+        left: 0;
+        font-size: 12px;
+      }
+    }
+  }
+
+  textarea::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .text-area {
+    padding: 12px;
+    max-height: 120px;
+    height: 110px;
+
+  }
+
+  .form-text-area {
+    resize: none;
+    height: 80px;
+    padding: 10px 0 !important;
+    overflow: hidden;
+
+  }
+  .disabled {
+    border: 1px dashed $gray3;
+    background: $gray5;
+    opacity: .8;
+  }
+  .form-group-file {
+    height: 82px;
+    max-height: 82px;
+    border: 1px dashed $gray4;
+
+
+
+    &.has-error {
+      border: 1px dashed $red;
+
+      .invalid-feedback {
+        bottom: -90px;
+      }
+
+    }
+
+    &.has-error:before {
+      background-image: url("images/zip-error.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 666;
+      left: 16px;
+
+      .form-label {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 16px;
+      background: $gray0;
+      border-radius: 8px;
+      background-image: url("images/Zip.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      width: 20px;
+      height: 24px;
+      padding: 13px 15px;
+    }
+
+    input {
+      display: none;
+    }
+
+    .form-label {
+      color: $gray1;
+    }
+
+    .form-label {
+      left: 85px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .form-sub-label {
+      color: $gray3;
+      position: absolute;
+      top: 50px;
+      left: 85px;
+
+    }
+  }
+}
