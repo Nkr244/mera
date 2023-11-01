@@ -1,0 +1,54 @@
+.footer {
+  padding: 100px 0 90px 0;
+  background: #F9F9F9;
+
+  &-content {
+    justify-content: space-between;
+    gap: 100px;
+
+    &-item {
+      .email {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      p {
+        color: $blue;
+        font-size: 100px;
+        font-weight: 900;
+      }
+      a {
+        text-decoration: none;
+        color: $gray2;
+      }
+
+      div {
+        flex-direction: column;
+        gap: 15px;
+
+      }
+
+      ul {
+        gap: 67px;
+        list-style: none;
+
+        a {
+          color: $gray2;
+          text-decoration: none;
+        }
+      }
+
+      &:first-child {
+        gap: 50px;
+        flex-basis: 70%;
+        flex-direction: column;
+      }
+
+      &:last-child {
+        gap: 56px;
+        flex-direction: column;
+        flex-basis: 30%;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
 body {
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -11,6 +16,21 @@ body {
 
 input:focus, textarea:focus, select:focus {
   outline: none !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.btn {
+  text-align: center;
+  display: block;
+  border-radius: 6px;
+  text-decoration: none;
+  color: $white;
+  background: $blue;
+  padding: 14px 0;
+  width: 100%;
 }
 
 .form-section {
@@ -99,9 +119,11 @@ input:focus, textarea:focus, select:focus {
       left: 12px;
       color: $gray2;
     }
+
     .form-file-delete {
       display: none;
     }
+
     .form-file-delete,
     .form-clear {
       position: absolute;
@@ -158,16 +180,17 @@ input:focus, textarea:focus, select:focus {
     overflow: hidden;
 
   }
+
   .disabled {
     border: 1px dashed $gray3;
     background: $gray5;
     opacity: .8;
   }
+
   .form-group-file {
     height: 82px;
     max-height: 82px;
     border: 1px dashed $gray4;
-
 
 
     &.has-error {

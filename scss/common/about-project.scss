@@ -1,0 +1,30 @@
+.about-project {
+  margin-bottom: 100px;
+  background: url("images/about-problems-bg.svg") no-repeat;
+  background-position-y: 65px;
+  background-position-x: -150px;
+  background-size: contain;
+  object-fit: contain;
+  &-blocks {
+    display: flex;
+
+    &-left {
+      flex-basis: 50%;
+    }
+    &-right {
+      flex-basis: 50%;
+      flex-direction: column;
+      gap: 20px;
+    }
+    &-item {
+      border-radius: 8px;
+      background: $gray0;
+      padding: 20px;
+      .blue-square {
+        margin-bottom: 16px;
+        color: $white;
+      }
+    }
+
+  }
+}

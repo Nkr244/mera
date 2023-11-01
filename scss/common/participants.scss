@@ -1,0 +1,67 @@
+.participants {
+  position: relative;
+  margin-bottom: 100px;
+
+  .custom-prev,
+  .custom-next {
+    position: absolute;
+    top: -60px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    content: '';
+  }
+
+  .custom-prev {
+    right: 65px;
+    background-image: url("images/gray-arrow-left.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+  }
+  .custom-next {
+    background-image: url("images/blue-arrow-right.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+  }
+
+  .slider {
+    width: 100%;
+  }
+
+  .slide {
+    flex-basis: 25%;
+    background: $gray0;
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 15px;
+    flex-direction: column;
+    border-radius: 8px;
+
+    h3 {
+      color: $gray1;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: $gray2;
+      font-size: 14px;
+    }
+  }
+
+  .slick-slide {
+    margin: 0 15px;
+    padding: 20px 15px;
+  }
+
+  .slide img {
+    max-width: 245px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+}
