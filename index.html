@@ -35,6 +35,31 @@
                         <a href="">Войти</a>
                     </div>
                 </div>
+                <div class="burger-menu">
+                    <div class="burger-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <i class="icon-close-large"></i>
+                    <div class="menu-items">
+                        <ul class="nav-menu">
+                            <li><a href="">Главная</a></li>
+                            <li><a href="">Лидерборд</a></li>
+                            <li><a href="">Задачи</a></li>
+                            <li><a href="">О проекте</a></li>
+                            <li><a href="">Вопросы и ответы</a></li>
+                        </ul>
+                        <div class="git-and-login git-and-login-mobile d-flex">
+                            <div class="login d-flex">
+                                <img src="images/avatar.svg" alt="">
+                                <a href="">Войти</a>
+                            </div>
+                            <img src="images/git.svg" alt="">
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -232,6 +257,21 @@
 <script>
 
     $(document).ready(function () {
+        var menuItems = document.querySelector('.menu-items');
+        var menuGit = document.querySelector('.git-and-login-mobile');
+        var burgerIcon = document.querySelector('.burger-icon');
+        var burgerClose = document.querySelector('.icon-close-large')
+        $('.icon-close-large').click(function () {
+            burgerIcon.style.display = 'block'
+            burgerClose.style.display = 'none'
+            menuItems.style.display = 'none';
+        })
+        document.querySelector('.burger-icon').addEventListener('click', function() {
+                burgerIcon.style.display = 'none'
+                burgerClose.style.display = 'block'
+                menuItems.style.display = 'block';
+                menuGit.style.display = 'block';
+        });
         $('.slider').slick({
             slidesToShow: 4,
             slidesToScroll: 1,

@@ -348,7 +348,9 @@ i:before {
 }
 
 
-@media (max-width: 1260px) {
-  padding: 0 20px;
+@media screen and (max-width: 1260px) {
+  .container {
+    padding: 0 20px;
 
+  }
 }

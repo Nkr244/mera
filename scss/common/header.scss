@@ -1,14 +1,18 @@
 .header {
   padding: 15px 0;
   border-bottom: 1px solid $gray4;
+
   &-content {
     align-items: center;
     justify-content: space-between;
+
     .git-and-login {
       gap: 30px;
+
       .login {
         align-items: center;
         gap: 4px;
+
         a {
           color: $gray1;
           text-decoration: none;
@@ -35,8 +39,99 @@
       }
 
     }
+
+    .burger-menu {
+      position: relative;
+      display: none;
+      i {
+        display: none;
+        cursor: pointer;
+        color: $black;
+        width: 34px;
+        height: 34px;
+        &:before {
+          font-size: 34px;
+          right: 2px;
+        }
+      }
+    }
+
+    .burger-icon {
+      width: 30px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+
+      & span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #000;
+        transition: transform 0.3s ease-in-out;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        &:nth-child(3) {
+          bottom: 0;
+        }
+      }
+    }
+
+    .menu-items {
+      display: none;
+      position: absolute;
+      width: 280px;
+      top: 54px;
+      left: -226px;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+      .git-and-login-mobile {
+        display: flex !important;
+        flex-direction: column;
+        gap: 20px;
+        img {
+          max-width: 95px;
+        }
+      }
+
+      & li {
+        margin-bottom: 20px;
+
+        a:hover {
+          border-bottom: none;
+        }
+
+        &:last-child {
+          border-bottom: 1px solid $gray3;
+          padding-bottom: 20px;
+        }
+      }
+
+      & a {
+        color: $gray1;
+        text-decoration: none;
+      }
+    }
   }
 }
-@media screen and (max-width: 1000px) {
 
+@media screen and (max-width: 1000px) {
+  .burger-menu {
+    display: inline-block !important;
+  }
+  .git-and-login,
+  .header-menu {
+    display: none;
+  }
 }

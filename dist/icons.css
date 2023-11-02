@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.ttf?c7917db4a23214c8d81fc08a31aa89d5") format("truetype"),
-url("./icons.woff?c7917db4a23214c8d81fc08a31aa89d5") format("woff"),
-url("./icons.woff2?c7917db4a23214c8d81fc08a31aa89d5") format("woff2");
+    src: url("./icons.ttf?13bbddfb63a52331f6376da3d8ed2afb") format("truetype"),
+url("./icons.woff?13bbddfb63a52331f6376da3d8ed2afb") format("woff"),
+url("./icons.woff2?13bbddfb63a52331f6376da3d8ed2afb") format("woff2");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -35,15 +35,18 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-catalogBurgerBlue:before {
     content: "\f106";
 }
-.icon-close:before {
+.icon-close-large:before {
     content: "\f107";
 }
-.icon-gray-arrow-left:before {
+.icon-close:before {
     content: "\f108";
 }
-.icon-zip-error:before {
+.icon-gray-arrow-left:before {
     content: "\f109";
 }
-.icon-zip:before {
+.icon-zip-error:before {
     content: "\f10a";
+}
+.icon-zip:before {
+    content: "\f10b";
 }

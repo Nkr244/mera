@@ -5,8 +5,9 @@
     "btnPlus": 61700,
     "catalogBurger": 61701,
     "catalogBurgerBlue": 61702,
-    "close": 61703,
-    "gray-arrow-left": 61704,
-    "zip-error": 61705,
-    "zip": 61706
+    "close-large": 61703,
+    "close": 61704,
+    "gray-arrow-left": 61705,
+    "zip-error": 61706,
+    "zip": 61707
 }

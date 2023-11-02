@@ -5,6 +5,7 @@ export type IconsId =
   | "btnPlus"
   | "catalogBurger"
   | "catalogBurgerBlue"
+  | "close-large"
   | "close"
   | "gray-arrow-left"
   | "zip-error"
@@ -17,6 +18,7 @@ export type IconsKey =
   | "BtnPlus"
   | "CatalogBurger"
   | "CatalogBurgerBlue"
+  | "CloseLarge"
   | "Close"
   | "GrayArrowLeft"
   | "ZipError"
@@ -29,6 +31,7 @@ export enum Icons {
   BtnPlus = "btnPlus",
   CatalogBurger = "catalogBurger",
   CatalogBurgerBlue = "catalogBurgerBlue",
+  CloseLarge = "close-large",
   Close = "close",
   GrayArrowLeft = "gray-arrow-left",
   ZipError = "zip-error",
@@ -42,8 +45,9 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.BtnPlus]: "61700",
   [Icons.CatalogBurger]: "61701",
   [Icons.CatalogBurgerBlue]: "61702",
-  [Icons.Close]: "61703",
-  [Icons.GrayArrowLeft]: "61704",
-  [Icons.ZipError]: "61705",
-  [Icons.Zip]: "61706",
+  [Icons.CloseLarge]: "61703",
+  [Icons.Close]: "61704",
+  [Icons.GrayArrowLeft]: "61705",
+  [Icons.ZipError]: "61706",
+  [Icons.Zip]: "61707",
 };
