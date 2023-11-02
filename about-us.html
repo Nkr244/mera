@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <title>MERA</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/icons.css">
 </head>
 <body>
-<section class="header  header-main">
-    <div class="container">
-        <div class="header-content d-flex">
-            <a href=""><img src="images/header-logo.svg" alt=""></a>
-            <div class="header-menu">
-                <ul class="nav-menu d-flex">
-                    <li><a href="" class="active">Главная</a></li>
-                    <li><a href="">Лидерборд</a></li>
-                    <li><a href="">Задачи</a></li>
-                    <li><a href="">О проекте</a></li>
-                    <li><a href="">Вопросы и ответы</a></li>
-                </ul>
-            </div>
-            <div class="git-and-login d-flex">
-                <img src="images/git.svg" alt="">
-                <div class="login d-flex">
-                    <img src="images/avatar.svg" alt="">
-                    <a href="">Войти</a>
+
+<div class="wrapper">
+    <section class="header  header-main">
+        <div class="container">
+            <div class="header-content d-flex">
+                <a href=""><img src="images/header-logo.svg" alt=""></a>
+                <div class="header-menu">
+                    <ul class="nav-menu d-flex">
+                        <li><a href="" class="active">Главная</a></li>
+                        <li><a href="">Лидерборд</a></li>
+                        <li><a href="">Задачи</a></li>
+                        <li><a href="">О проекте</a></li>
+                        <li><a href="">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="git-and-login d-flex">
+                    <img src="images/git.svg" alt="">
+                    <div class="login d-flex">
+                        <img src="images/avatar.svg" alt="">
+                        <a href="">Войти</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<div class="wrapper">
+    </section>
     <div class="container">
         <div class="about-us">
             <h2>О проекте MERA</h2>
@@ -83,33 +85,50 @@
             </div>
         </div>
     </div>
-</div>
-
-
-<section class="footer">
-    <div class="container">
-        <div class="footer-content d-flex">
-            <div class="footer-content-item d-flex">
-                <p>MERA</p>
-                <ul class="d-flex">
-                    <li><a href="">Лидерборд</a></li>
-                    <li><a href="">Задачи</a></li>
-                    <li><a href="">О проекте</a></li>
-                    <li><a href="">Вопросы и ответы</a></li>
-                </ul>
-            </div>
-            <div class="footer-content-item d-flex">
-                <a class="email" href="">mera@a-ai.ru</a>
-                <div class="d-flex">
-                    <a href="">Пользовательское соглашение</a>
-                    <a href="">Политика конфиденциальности</a>
+    <section class="footer">
+        <div class="container">
+            <div class="footer-content d-flex">
+                <div class="footer-content-item d-flex">
+                    <p>MERA</p>
+                    <ul class="d-flex">
+                        <li><a href="">Лидерборд</a></li>
+                        <li><a href="">Задачи</a></li>
+                        <li><a href="">О проекте</a></li>
+                        <li><a href="">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content-item d-flex">
+                    <a class="email" href="">mera@a-ai.ru</a>
+                    <div class="d-flex">
+                        <a href="">Пользовательское соглашение</a>
+                        <a href="">Политика конфиденциальности</a>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+</div>
+<section class="modal-wrapper modal-wrapper-image">
+    <div class="modal-content">
+        <div class="modal-image">
+            <img src="images/about-us-image.png" alt="">
+        </div>
+        <button class="btn-close" type="button"></button>
     </div>
 </section>
+
+
+
 <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 <script src="js/jquery-3.5.1.slim.min.js"></script>
 <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<script>
+    $('.about-us-img').click(function () {
+        $('.modal-wrapper-image').addClass('open')
+    })
+    $('.btn-close').click(function () {
+        $('.modal-wrapper-image').removeClass('open')
+    })
+</script>
 </body>
 </html>

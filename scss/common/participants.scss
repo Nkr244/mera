@@ -1,31 +1,28 @@
 .participants {
   position: relative;
   margin-bottom: 100px;
-
-  .custom-prev,
-  .custom-next {
-    position: absolute;
-    top: -60px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    content: '';
+  .custom-prev.slick-disabled,
+  .custom-next.slick-disabled {
+    i {
+      color: $gray3;
+    }
   }
-
   .custom-prev {
-    right: 65px;
-    background-image: url("images/gray-arrow-left.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 10px;
+    i {
+      left: -1px;
+
+    }
   }
+
   .custom-next {
-    background-image: url("images/blue-arrow-right.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 10px;
+    i {
+      left: 1px;
+    }
+  }
+
+  i {
+    top: -2px;
+    color: $blue;
   }
 
   .slider {
@@ -60,7 +57,7 @@
   }
 
   .slide img {
-    max-width: 245px;
+    width: 100%;
     height: 100px;
     margin-bottom: 15px;
   }
