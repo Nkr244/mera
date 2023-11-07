@@ -1161,11 +1161,33 @@ i:before {
   transform: translateY(-50%);
   right: 10px;
 }
+.submit .btn-delete,
 .submit .btn-download {
   max-width: 126px;
 }
+.submit .btn-delete i,
 .submit .btn-download i {
-  right: 15px;
+  right: 15px !important;
+}
+.submit .btn-delete i {
+  top: 47% !important;
+  right: 10px !important;
+}
+.submit .btn-delete i:before {
+  font-size: 28px !important;
+}
+.submit .btn-edit i {
+  top: 45% !important;
+  right: 12px !important;
+}
+.submit .btn-public {
+  display: block;
+  max-width: 222px !important;
+  padding-right: 120px !important;
+  text-wrap: nowrap;
+}
+.submit .btn-public i {
+  right: 15px !important;
 }
 .submit-sub-title {
   display: block;
@@ -1270,6 +1292,52 @@ i:before {
   color: rgb(23, 81, 208);
 }
 
+.modal-delete .modal-content,
+.modal-submit .modal-content {
+  max-width: 500px;
+  max-height: 215px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-delete .modal-content h1,
+.modal-submit .modal-content h1 {
+  font-size: 24px;
+  color: rgb(23, 81, 208);
+  margin-bottom: 10px;
+}
+.modal-delete .modal-content p,
+.modal-submit .modal-content p {
+  color: rgb(79, 77, 85);
+  margin-bottom: 20px;
+  text-align: center;
+}
+.modal-delete .modal-content i,
+.modal-submit .modal-content i {
+  cursor: pointer;
+  color: rgb(201, 201, 204);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.modal-delete .modal-content .btn,
+.modal-submit .modal-content .btn {
+  max-width: 190px;
+  padding: 14px 65px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.modal-delete .modal-content .btn-delete,
+.modal-submit .modal-content .btn-delete {
+  color: rgb(10, 9, 11);
+  background: rgb(230, 230, 230);
+}
+.modal-delete .modal-content .modal-button,
+.modal-submit .modal-content .modal-button {
+  gap: 10px;
+}
+
 .number li {
   font-weight: bold;
   margin-bottom: 4px;
@@ -1288,6 +1356,66 @@ i:before {
 }
 .gray-text p:first-child {
   font-weight: bold !important;
+}
+
+.edit-submit-header {
+  align-items: center;
+  position: relative;
+}
+.edit-submit .sub-title {
+  width: 85%;
+}
+.edit-submit .go-to-back {
+  color: rgb(127, 125, 131);
+  position: absolute;
+  top: 12px;
+  right: -30px;
+}
+.edit-submit .form-section .btn:disabled {
+  color: rgb(201, 201, 204);
+  background: rgb(241, 241, 241);
+}
+
+.container {
+  position: relative;
+}
+
+.cookie {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  max-width: 600px;
+  background: rgb(248, 248, 248);
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+.cookie i {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  cursor: pointer;
+  color: rgb(79, 77, 85);
+}
+.cookie p {
+  color: rgb(79, 77, 85);
+  margin-bottom: 20px;
+}
+.cookie button {
+  width: 95px;
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+.not-found {
+  padding: 100px 80px;
+}
+.not-found p {
+  margin-bottom: 20px;
+}
+.not-found button {
+  max-width: 222px;
+  margin: 0 auto;
+  font-size: 16px;
 }
 
 .footer {

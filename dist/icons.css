@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.ttf?7321ef1fd8a08202b3b04089e4e39b7f") format("truetype"),
-url("./icons.woff?7321ef1fd8a08202b3b04089e4e39b7f") format("woff"),
-url("./icons.woff2?7321ef1fd8a08202b3b04089e4e39b7f") format("woff2");
+    src: url("./icons.ttf?d2f35b1444cda6430d0f5e1d2043780a") format("truetype"),
+url("./icons.woff?d2f35b1444cda6430d0f5e1d2043780a") format("woff"),
+url("./icons.woff2?d2f35b1444cda6430d0f5e1d2043780a") format("woff2");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -17,72 +17,75 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-alert-circle-fill:before {
+.icon-404:before {
     content: "\f101";
 }
-.icon-arrow-down:before {
+.icon-alert-circle-fill:before {
     content: "\f102";
 }
-.icon-arrow-up:before {
+.icon-arrow-down:before {
     content: "\f103";
 }
-.icon-blue-arrow-right:before {
+.icon-arrow-up:before {
     content: "\f104";
 }
-.icon-btn-close:before {
+.icon-blue-arrow-right:before {
     content: "\f105";
 }
-.icon-btnMinus:before {
+.icon-btn-close:before {
     content: "\f106";
 }
-.icon-btnPlus:before {
+.icon-btnMinus:before {
     content: "\f107";
 }
-.icon-catalogBurger:before {
+.icon-btnPlus:before {
     content: "\f108";
 }
-.icon-catalogBurgerBlue:before {
+.icon-catalogBurger:before {
     content: "\f109";
 }
-.icon-checkbox:before {
+.icon-catalogBurgerBlue:before {
     content: "\f10a";
 }
-.icon-close-large:before {
+.icon-checkbox:before {
     content: "\f10b";
 }
-.icon-close:before {
+.icon-close-large:before {
     content: "\f10c";
 }
-.icon-download-outline:before {
+.icon-close:before {
     content: "\f10d";
 }
-.icon-edit-contained:before {
+.icon-download-outline:before {
     content: "\f10e";
 }
-.icon-email-filled:before {
+.icon-edit-contained:before {
     content: "\f10f";
 }
-.icon-eye-closed-filled:before {
+.icon-email-filled:before {
     content: "\f110";
 }
-.icon-eye-open-filled:before {
+.icon-eye-closed-filled:before {
     content: "\f111";
 }
-.icon-gray-arrow-left:before {
+.icon-eye-open-filled:before {
     content: "\f112";
 }
-.icon-trash:before {
+.icon-gray-arrow-left:before {
     content: "\f113";
 }
-.icon-user-profile-group-filled:before {
+.icon-trash:before {
     content: "\f114";
 }
-.icon-users-profiles:before {
+.icon-user-profile-group-filled:before {
     content: "\f115";
 }
-.icon-zip-error:before {
+.icon-users-profiles:before {
     content: "\f116";
 }
-.icon-zip:before {
+.icon-zip-error:before {
     content: "\f117";
+}
+.icon-zip:before {
+    content: "\f118";
 }

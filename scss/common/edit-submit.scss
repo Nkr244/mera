@@ -1,0 +1,21 @@
+.edit-submit {
+  &-header {
+    align-items: center;
+    position: relative;
+  }
+  .sub-title {
+    width: 85%;
+  }
+  .go-to-back {
+    color: $gray2;
+    position: absolute;
+    top: 12px;
+    right: -30px;
+  }
+  .form-section {
+    .btn:disabled {
+      color: $gray3;
+background: $gray5;
+    }
+  }
+}

@@ -31,11 +31,37 @@
       }
     }
   }
+  .btn-delete,
   .btn-download {
     max-width: 126px;
      i {
-       right: 15px;
+       right: 15px !important;
      }
+  }
+  .btn-delete {
+    i {
+      top: 47% !important;
+      right: 10px !important;
+      &:before {
+        font-size: 28px !important;
+      }
+    }
+  }
+  .btn-edit {
+    i {
+      top: 45% !important;
+      right: 12px !important;
+    }
+
+  }
+  .btn-public {
+    display: block;
+    max-width: 222px !important;
+    padding-right: 120px !important;
+    text-wrap: nowrap;
+    i {
+      right: 15px !important;
+    }
   }
 
   &-sub-title {
@@ -175,7 +201,48 @@
   }
 
 }
+.modal-delete,
+.modal-submit {
+  .modal-content {
+    max-width: 500px;
+    max-height: 215px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 24px;
+      color: $blue;
+      margin-bottom: 10px;
+    }
 
+    p {
+      color: $gray1;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    i {
+      cursor:pointer;
+      color: $gray3;
+      position: absolute;
+      top:10px;
+      right: 10px;
+    }
+    .btn {
+      max-width: 190px;
+      padding: 14px 65px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .btn-delete {
+      color: $black;
+      background: $gray4;
+    }
+    .modal-button {
+      gap: 10px;
+    }
+  }
+}
 .number {
   li {
     font-weight: bold;

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MERA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/icons.css">
+
+
+</head>
+<body>
+<div class="wrapper">
+    <section class="header  header-main">
+        <div class="container">
+            <div class="header-content d-flex">
+                <a href=""><img src="images/header-logo.svg" alt=""></a>
+                <div class="header-menu">
+                    <ul class="nav-menu d-flex">
+                        <li><a href="" class="active">Главная</a></li>
+                        <li><a href="">Лидерборд</a></li>
+                        <li><a href="">Задачи</a></li>
+                        <li><a href="">О проекте</a></li>
+                        <li><a href="">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="git-and-login d-flex">
+                    <img src="images/git.svg" alt="">
+                    <div class="login d-flex">
+                        <img src="images/avatar.svg" alt="">
+                        <a href="">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+
+        <div id="app" class="edit-submit">
+            <div class="edit-submit-header d-flex justy-space-between">
+                <h2>Редактировать сабмит</h2>
+                <a class="go-to-back" href="">Вернуться назад</a>
+            </div>
+
+            <p class="sub-title">После редактирования сабмит повторно пройдет систему скоринга, данные о нем обновятся.</p>
+            <div class="form-section">
+                <h2>Поля формы сабмита:</h2>
+                <label class="form-group">
+                    <input type="text" class="form-control">
+                    <span class="form-label">Название команды</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control">
+                    <span class="form-label">Название сабмита</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control">
+                    <span class="form-label">Ссылка на ML модель</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+                <label class="form-group">
+                    <input type="text" class="form-control">
+                    <span class="form-label">Дополнительные ссылки (необязательное поле)</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <span class="help-circle"><p>В поле может быть ссылка на статью на arxiv, на хабр-пост о решении, на репозиторий, на Hugging Face</p></span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+            </div>
+            <div class="form-section">
+                <h2>Описание модели и её обучения:</h2>
+                <label class="form-group text-area">
+                    <textarea type="text" class="form-text-area"></textarea>
+                    <span class="form-label">Описание архитектуры</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <span class="help-circle"><p>Указать архитектуру, кол-во параметров, training objective модели
+                Пример: Decoder-only causal language models with the
+                Transformer architecture similar to GPT-3 (Brown et al., 2020);
+                7B parameters</p></span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+                <label class="form-group text-area">
+                    <textarea type="text" class="form-text-area"></textarea>
+                    <span class="form-label">Описание обучения</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <span class="help-circle"><p>Указать как обучали и запускали: был ли произведен fine-tune, был ли SFT, или это модель претрейна в формате zero-shot, и т. д.</p></span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+                <label class="form-group text-area">
+                    <textarea type="text" class="form-text-area"></textarea>
+                    <span class="form-label">Данные претрейна</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <span class="help-circle"><p>Например: Обучались на 300GB открытых данных. Домены: новости, литература, нон-фикшен, юридические документы</p></span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+                <label class="form-group text-area">
+                    <textarea type="text" class="form-text-area"></textarea>
+                    <span class="form-label">Детали обучения</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <span class="help-circle"><p><span>Параметры обучения, библиотека, оптимизатор, и т. д.</span>
+                            All models are trained with the Fairseq library (Ott et al., 2019). We use Adam optimizer with 𝛽1 = 0.9, 𝛽2 = 0.98, 𝜖 = 1𝑒 − 8. We adjust the learning rate based on model size, e.g. 1.5𝑒 − 3 for the 564M and 1.7B model, 7.5𝑒 − 4 for the 2.9B model, and 1.2𝑒 − 4 for the 7.5B models. Learning rates were adjusted with a 2000 warm-up updates followed by a polynomial decay schedule. All models are trained with data parallel and an effective batch size of 4M tokens. The model was trained on 256 A100 GPUs for about 3 weeks, at a speed of 311.6k words per second</p></span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+                <label class="form-group text-area">
+                    <textarea type="text" class="form-text-area"></textarea>
+                    <span class="form-label">Лицензия</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <span class="help-circle"><p>MIT / Проприетарная модель</p></span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+            </div>
+            <div class="form-section">
+                <h2>Описание параметров на инференсе:</h2>
+                <label class="form-group text-area">
+                    <textarea type="text" class="form-text-area"></textarea>
+                    <span class="form-label">Стратегия, генерация и параметры</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <span class="help-circle"><p>Header Укажите каким способом вы генерировали данные модели, стратегию генерации, top_p, top_k, и т. д.
+                7B parameters</p></span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+                <label class="form-group text-area">
+                    <textarea type="text" class="form-text-area" rows="150"></textarea>
+                    <span class="form-label">Комментарии об инференсе (необязательное поле)</span>
+                    <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
+                    <span class="help-circle">
+                <p>
+                Для воспроизводимости результатов и понимания, как происходил запуск, укажите пробовали ли вы видоизменять промпты, кол-во шотов, информацию о промптах, и т. д.
+                </p>
+            </span>
+                    <button class="form-clear"><i class="icon-close"></i></button>
+                </label>
+            </div>
+            <div class="form-section">
+                <label class="form-group form-group-file ?has-error disabled ?active">
+                    <span id="fileName" class="form-label">Прикрепить файл</span>
+                    <i class="icon-zip"></i>
+                    <input id="myFileInput" type="file" class="form-control" onchange="handleFileUpload()" disabled>
+                    <span class="form-control-desc"></span>
+                    <span class="invalid-feedback">Архив слишком большой. Максимальная величина — 50 Мб</span>
+                    <button class="form-file-delete" onclick="clickDeleteFile()"><i class="icon-close"></i></button>
+                </label>
+            </div>
+            <div class="form-section">
+                <button class="btn" disabled>Отправить</button>
+            </div>
+        </div>
+
+    </div>
+    <section class="footer">
+        <div class="container">
+            <div class="footer-content d-flex">
+                <div class="footer-content-item d-flex">
+                    <p>MERA</p>
+                    <ul class="d-flex">
+                        <li><a href="">Лидерборд</a></li>
+                        <li><a href="">Задачи</a></li>
+                        <li><a href="">О проекте</a></li>
+                        <li><a href="">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-content-item d-flex">
+                    <a class="email" href="">mera@a-ai.ru</a>
+                    <div class="d-flex">
+                        <a href="">Пользовательское соглашение</a>
+                        <a href="">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script>
+
+    if ($('#myFileInput').prop('disabled')) {
+        $('.form-group-file').addClass('disabled')
+    } else {
+        $('.form-group-file').removeClass('disabled')
+    }
+    $(document).ready(function () {
+
+
+        const input = document.querySelectorAll('input');
+        const minLength = 0;
+        const maxLength = 10;
+        input.forEach(element => {
+
+            element.addEventListener('input', (event) => {
+                const el = event.target;
+
+                if (el.value.length > minLength) {
+                    el.parentNode.querySelector('.form-clear').style.display = 'block'
+
+                } else {
+                    el.parentNode.querySelector('.form-clear').style.display = 'none'
+                }
+            });
+
+        });
+        const textarea = document.querySelectorAll('.form-text-area');
+        textarea.forEach(element => {
+            element.addEventListener('input', (event) => {
+                const el = event.target
+
+                if (el.value.length > minLength) {
+                    el.parentNode.querySelector('.form-clear').style.display = 'block'
+                } else {
+                    el.parentNode.querySelector('.form-clear').style.display = 'none'
+                }
+                if (el.value.length > maxLength) {
+                    el.parentNode.classList.add('has-error');
+                } else {
+                    el.parentNode.classList.remove('has-error');
+                }
+            })
+        })
+
+        const clearEl = document.querySelectorAll('.icon-close');
+        clearEl.forEach(element => {
+            element.addEventListener('click', (event) => {
+                const el = event.target;
+
+                if (!el.parentNode.parentNode.querySelector('.form-control')) {
+                    el.parentNode.parentNode.querySelector('.form-text-area').value = ''
+                } else {
+                    el.parentNode.parentNode.querySelector('.form-control').value = ''
+                }
+                el.parentNode.parentNode.querySelector('.form-label').style.fontSize = '16px';
+                el.parentNode.parentNode.querySelector('.form-label').style.top = '21px';
+                el.parentNode.style.display = 'none'
+
+                el.parentNode.parentNode.classList.remove('has-error');
+
+            });
+        });
+    });
+
+    function handleFileUpload() {
+        const fileInput = document.getElementById("myFileInput");
+        const fileNameElement = document.getElementById("fileName");
+
+        const file = fileInput.files[0];
+        const fileName = file.name;
+
+        fileInput.parentNode.querySelector('.form-label').style.fontSize = '16px';
+        fileInput.parentNode.querySelector('.form-label').style.top = '50%'
+        fileInput.parentNode.querySelector('.form-label').style.transform = 'translateY(-50%)%'
+        fileNameElement.textContent = fileName;
+
+        if (!file > true) {
+            fileInput.parentNode.classList.add('has-error')
+        } else {
+            fileInput.parentNode.classList.remove('has-error')
+            fileInput.parentNode.querySelector('.form-file-delete').style.display = "block"
+        }
+    }
+
+    function clickDeleteFile() {
+        $("#myFileInput").val("");
+        document.getElementById("fileName").innerText = 'Прикрепить файл';
+    }
+</script>
+</body>
+</html>
