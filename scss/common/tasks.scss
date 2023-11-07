@@ -1,0 +1,32 @@
+.tasks {
+  .btn-download-all {
+    position: relative;
+    max-width: 217px;
+    max-height: 48px;
+    font-size: 16px;
+    padding-right: 40px;
+    i {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+    }
+  }
+  th,td {
+    text-align: start;
+
+  }
+  td {
+    color: $gray1;
+    max-width: 200px;
+    a {
+      color: $blue;
+    }
+  }
+  th:nth-child(3) {
+    border-right: none;
+  }
+  td:nth-child(3) {
+    font-weight: normal;
+    border-right: none;
+  }
+}

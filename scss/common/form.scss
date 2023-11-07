@@ -273,3 +273,43 @@
     }
   }
 }
+@media screen and (max-width: 1000px){
+  .form-container {
+    padding: 0 35px ;
+    h2 {
+      font-size: 24px !important;
+    }
+    .form-section {
+      h2 {
+        font-size: 16px !important;
+        margin-bottom: 5px !important;
+      }
+      .form-group {
+        z-index: unset;
+        .form-label {
+          font-size: 14px;
+        }
+        .help-circle {
+          p {
+            z-index: 1000000000000000;
+          }
+        }
+        .help-circle:hover p{
+          width: 340px;
+
+          transform: none !important;
+          top: 150% !important;
+          left: -360px !important;
+          z-index: 9999;
+          &:before {
+            top: -8px;
+            transform: rotate(90deg);
+            left: auto;
+            right: 7px;
+            background: url(images/help-circle-flag.svg) no-repeat center;
+          }
+        }
+      }
+    }
+  }
+}

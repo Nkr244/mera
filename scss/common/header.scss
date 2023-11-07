@@ -96,6 +96,7 @@
       padding: 10px;
       background-color: #fff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 669;
 
       .git-and-login-mobile {
         display: flex !important;
@@ -134,5 +135,20 @@
   .git-and-login,
   .header-menu {
     display: none;
+  }
+  .header-content{
+    .menu-items {
+
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .header-content{
+    .menu-items {
+      position: fixed;
+      top: 74px ;
+      left: 0;
+      width: 100%;
+    }
   }
 }

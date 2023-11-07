@@ -18,6 +18,7 @@ export type IconsId =
   | "eye-closed-filled"
   | "eye-open-filled"
   | "gray-arrow-left"
+  | "mdi_eye"
   | "trash"
   | "user-profile-group-filled"
   | "users-profiles"
@@ -44,6 +45,7 @@ export type IconsKey =
   | "EyeClosedFilled"
   | "EyeOpenFilled"
   | "GrayArrowLeft"
+  | "MdiEye"
   | "Trash"
   | "UserProfileGroupFilled"
   | "UsersProfiles"
@@ -70,6 +72,7 @@ export enum Icons {
   EyeClosedFilled = "eye-closed-filled",
   EyeOpenFilled = "eye-open-filled",
   GrayArrowLeft = "gray-arrow-left",
+  MdiEye = "mdi_eye",
   Trash = "trash",
   UserProfileGroupFilled = "user-profile-group-filled",
   UsersProfiles = "users-profiles",
@@ -97,9 +100,10 @@ export const ICONS_CODEPOINTS: { [key in Icons]: string } = {
   [Icons.EyeClosedFilled]: "61713",
   [Icons.EyeOpenFilled]: "61714",
   [Icons.GrayArrowLeft]: "61715",
-  [Icons.Trash]: "61716",
-  [Icons.UserProfileGroupFilled]: "61717",
-  [Icons.UsersProfiles]: "61718",
-  [Icons.ZipError]: "61719",
-  [Icons.Zip]: "61720",
+  [Icons.MdiEye]: "61716",
+  [Icons.Trash]: "61717",
+  [Icons.UserProfileGroupFilled]: "61718",
+  [Icons.UsersProfiles]: "61719",
+  [Icons.ZipError]: "61720",
+  [Icons.Zip]: "61721",
 };

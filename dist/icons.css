@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.ttf?d2f35b1444cda6430d0f5e1d2043780a") format("truetype"),
-url("./icons.woff?d2f35b1444cda6430d0f5e1d2043780a") format("woff"),
-url("./icons.woff2?d2f35b1444cda6430d0f5e1d2043780a") format("woff2");
+    src: url("./icons.ttf?ef87b671c76a48b1ef806d5d5e6348ca") format("truetype"),
+url("./icons.woff?ef87b671c76a48b1ef806d5d5e6348ca") format("woff"),
+url("./icons.woff2?ef87b671c76a48b1ef806d5d5e6348ca") format("woff2");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -74,18 +74,21 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-gray-arrow-left:before {
     content: "\f113";
 }
-.icon-trash:before {
+.icon-mdi_eye:before {
     content: "\f114";
 }
-.icon-user-profile-group-filled:before {
+.icon-trash:before {
     content: "\f115";
 }
-.icon-users-profiles:before {
+.icon-user-profile-group-filled:before {
     content: "\f116";
 }
-.icon-zip-error:before {
+.icon-users-profiles:before {
     content: "\f117";
 }
-.icon-zip:before {
+.icon-zip-error:before {
     content: "\f118";
+}
+.icon-zip:before {
+    content: "\f119";
 }

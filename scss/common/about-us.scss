@@ -50,6 +50,7 @@
         position: relative;
         max-width: 200px;
         width: 100%;
+        color: $gray1;
       }
       p:before {
         position: absolute;
@@ -70,6 +71,47 @@
         a {
           color: $blue;
           word-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+.modal-wrapper-image {
+  .btn-close {
+    color: $gray1;
+  }
+}
+@media screen and (max-width: 750px) {
+  .about-us {
+    max-width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .about-us {
+    max-width: 100%;
+    .second-title {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    img {
+      max-width: 100%;
+    }
+    &-item {
+      p {
+        font-size: 14px;
+      }
+    }
+    &-links {
+      &-item {
+        align-items: start;
+        flex-direction: column;
+        p {
+          margin-bottom: 8px;
         }
       }
     }

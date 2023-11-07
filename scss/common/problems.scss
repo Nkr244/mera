@@ -1,27 +1,32 @@
 .main-content {
   .problems {
     margin-bottom: 100px;
+
     &-content {
       &-list {
         gap: 20px;
       }
+
       &-item {
         flex-basis: 33.3333%;
         padding: 20px;
         border-radius: 8px;
         background: $gray0;
+
         .blue-square {
           margin-bottom: 45px;
         }
       }
     }
   }
+
   h2 {
     color: $blue;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 25px;
   }
+
   .blue-square {
     background: $blue;
     border-radius: 6px;
@@ -29,11 +34,36 @@
     height: 32px;
     align-items: center;
     justify-content: center;
+
     .white-circle {
       background: $white;
       width: 8px;
       height: 8px;
       border-radius: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .problems {
+    &-content {
+      &-list {
+        flex-wrap: wrap;
+        .problems-content-item {
+          flex-basis: calc(50% - 10px);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .problems {
+    &-content {
+      &-list {
+        .problems-content-item {
+          flex-basis: 100%
+        }
+      }
     }
   }
 }

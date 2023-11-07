@@ -5,26 +5,37 @@
   background-position-x: -150px;
   background-size: contain;
   object-fit: contain;
+
   &-blocks {
     display: flex;
 
     &-left {
       flex-basis: 50%;
     }
+
     &-right {
       flex-basis: 50%;
       flex-direction: column;
       gap: 20px;
     }
+
     &-item {
       border-radius: 8px;
       background: $gray0;
       padding: 20px;
+
       .blue-square {
         margin-bottom: 16px;
         color: $white;
       }
     }
+  }
+}
 
+@media screen and (max-width: 750px) {
+  .about-project {
+    &-blocks {
+      flex-direction: column;
+    }
   }
 }

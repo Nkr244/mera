@@ -52,3 +52,29 @@
     }
   }
 }
+@media screen and (max-width: 850px){
+  .footer  {
+    padding: 60px 0 90px 0;
+    &-content {
+
+      flex-direction: column;
+      gap: 40px;
+      &-item {
+        &:first-child {
+          gap: 80px;
+          position: relative;
+        }
+        .email {
+          position: absolute;
+          top: 140px;
+          left: 20px;
+        }
+        ul {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+
+  }
+}

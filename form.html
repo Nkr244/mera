@@ -11,7 +11,7 @@
 <body>
 <div class="wrapper">
     <section class="header  header-main">
-        <div class="container">
+        <div class=" container">
             <div class="header-content d-flex">
                 <a href=""><img src="images/header-logo.svg" alt=""></a>
                 <div class="header-menu">
@@ -33,7 +33,7 @@
             </div>
         </div>
     </section>
-    <div class="container">
+    <div class="form-container container">
 
         <div id="app">
             <h2>Добавить сабмит</h2>
@@ -97,8 +97,18 @@
                     <textarea type="text" class="form-text-area"></textarea>
                     <span class="form-label">Детали обучения</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
-                    <span class="help-circle"><p><span>Параметры обучения, библиотека, оптимизатор, и т. д.</span>
-                            All models are trained with the Fairseq library (Ott et al., 2019). We use Adam optimizer with 𝛽1 = 0.9, 𝛽2 = 0.98, 𝜖 = 1𝑒 − 8. We adjust the learning rate based on model size, e.g. 1.5𝑒 − 3 for the 564M and 1.7B model, 7.5𝑒 − 4 for the 2.9B model, and 1.2𝑒 − 4 for the 7.5B models. Learning rates were adjusted with a 2000 warm-up updates followed by a polynomial decay schedule. All models are trained with data parallel and an effective batch size of 4M tokens. The model was trained on 256 A100 GPUs for about 3 weeks, at a speed of 311.6k words per second</p></span>
+                    <span class="help-circle">
+                        <p>
+                            <span>Параметры обучения, библиотека, оптимизатор, и т. д.</span>
+                            All models are trained with the Fairseq library (Ott et al., 2019). We use Adam optimizer with 𝛽1 = 0.9, 𝛽2 = 0.98,
+                            𝜖 = 1𝑒 − 8. We adjust the learning rate based on model size, e.g. 1.5𝑒 − 3 for the 564M
+                            and 1.7B model, 7.5𝑒 − 4 for the 2.9B model, and 1.2𝑒 − 4 for the 7.5B models.
+                            Learning rates were adjusted with a 2000 warm-up updates followed by a polynomial
+                            decay schedule. All models are trained with data parallel and an effective batch size
+                            of 4M tokens. The model was trained on 256 A100 GPUs for about 3 weeks, at a speed of
+                            311.6k words per second
+                        </p>
+                    </span>
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group text-area">
@@ -184,59 +194,59 @@
     $(document).ready(function () {
 
 
-            const input = document.querySelectorAll('input');
-            const minLength = 0;
-            const maxLength = 10;
-            input.forEach(element => {
+        const input = document.querySelectorAll('input');
+        const minLength = 0;
+        const maxLength = 10;
+        input.forEach(element => {
 
-                element.addEventListener('input', (event) => {
-                    const el = event.target;
+            element.addEventListener('input', (event) => {
+                const el = event.target;
 
-                    if (el.value.length > minLength) {
-                        el.parentNode.querySelector('.form-clear').style.display = 'block'
+                if (el.value.length > minLength) {
+                    el.parentNode.querySelector('.form-clear').style.display = 'block'
 
-                    } else {
-                        el.parentNode.querySelector('.form-clear').style.display = 'none'
-                    }
-                });
-
+                } else {
+                    el.parentNode.querySelector('.form-clear').style.display = 'none'
+                }
             });
-            const textarea = document.querySelectorAll('.form-text-area');
-            textarea.forEach(element => {
-                element.addEventListener('input', (event) => {
-                    const el = event.target
 
-                    if (el.value.length > minLength) {
-                        el.parentNode.querySelector('.form-clear').style.display = 'block'
-                    } else {
-                        el.parentNode.querySelector('.form-clear').style.display = 'none'
-                    }
-                    if (el.value.length > maxLength) {
-                        el.parentNode.classList.add('has-error');
-                    } else {
-                        el.parentNode.classList.remove('has-error');
-                    }
-                })
+        });
+        const textarea = document.querySelectorAll('.form-text-area');
+        textarea.forEach(element => {
+            element.addEventListener('input', (event) => {
+                const el = event.target
+
+                if (el.value.length > minLength) {
+                    el.parentNode.querySelector('.form-clear').style.display = 'block'
+                } else {
+                    el.parentNode.querySelector('.form-clear').style.display = 'none'
+                }
+                if (el.value.length > maxLength) {
+                    el.parentNode.classList.add('has-error');
+                } else {
+                    el.parentNode.classList.remove('has-error');
+                }
             })
+        })
 
-            const clearEl = document.querySelectorAll('.icon-close');
-            clearEl.forEach(element => {
-                element.addEventListener('click', (event) => {
-                    const el = event.target;
+        const clearEl = document.querySelectorAll('.icon-close');
+        clearEl.forEach(element => {
+            element.addEventListener('click', (event) => {
+                const el = event.target;
 
-                    if (!el.parentNode.parentNode.querySelector('.form-control')) {
-                        el.parentNode.parentNode.querySelector('.form-text-area').value = ''
-                    } else {
-                        el.parentNode.parentNode.querySelector('.form-control').value = ''
-                    }
-                    el.parentNode.parentNode.querySelector('.form-label').style.fontSize = '16px';
-                    el.parentNode.parentNode.querySelector('.form-label').style.top = '21px';
-                    el.parentNode.style.display = 'none'
+                if (!el.parentNode.parentNode.querySelector('.form-control')) {
+                    el.parentNode.parentNode.querySelector('.form-text-area').value = ''
+                } else {
+                    el.parentNode.parentNode.querySelector('.form-control').value = ''
+                }
+                el.parentNode.parentNode.querySelector('.form-label').style.fontSize = '16px';
+                el.parentNode.parentNode.querySelector('.form-label').style.top = '21px';
+                el.parentNode.style.display = 'none'
 
-                    el.parentNode.parentNode.classList.remove('has-error');
+                el.parentNode.parentNode.classList.remove('has-error');
 
-                });
             });
+        });
     });
 
     function handleFileUpload() {
