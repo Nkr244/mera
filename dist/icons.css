@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.ttf?13bbddfb63a52331f6376da3d8ed2afb") format("truetype"),
-url("./icons.woff?13bbddfb63a52331f6376da3d8ed2afb") format("woff"),
-url("./icons.woff2?13bbddfb63a52331f6376da3d8ed2afb") format("woff2");
+    src: url("./icons.ttf?7321ef1fd8a08202b3b04089e4e39b7f") format("truetype"),
+url("./icons.woff?7321ef1fd8a08202b3b04089e4e39b7f") format("woff"),
+url("./icons.woff2?7321ef1fd8a08202b3b04089e4e39b7f") format("woff2");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -17,36 +17,72 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-blue-arrow-right:before {
+.icon-alert-circle-fill:before {
     content: "\f101";
 }
-.icon-btn-close:before {
+.icon-arrow-down:before {
     content: "\f102";
 }
-.icon-btnMinus:before {
+.icon-arrow-up:before {
     content: "\f103";
 }
-.icon-btnPlus:before {
+.icon-blue-arrow-right:before {
     content: "\f104";
 }
-.icon-catalogBurger:before {
+.icon-btn-close:before {
     content: "\f105";
 }
-.icon-catalogBurgerBlue:before {
+.icon-btnMinus:before {
     content: "\f106";
 }
-.icon-close-large:before {
+.icon-btnPlus:before {
     content: "\f107";
 }
-.icon-close:before {
+.icon-catalogBurger:before {
     content: "\f108";
 }
-.icon-gray-arrow-left:before {
+.icon-catalogBurgerBlue:before {
     content: "\f109";
 }
-.icon-zip-error:before {
+.icon-checkbox:before {
     content: "\f10a";
 }
-.icon-zip:before {
+.icon-close-large:before {
     content: "\f10b";
+}
+.icon-close:before {
+    content: "\f10c";
+}
+.icon-download-outline:before {
+    content: "\f10d";
+}
+.icon-edit-contained:before {
+    content: "\f10e";
+}
+.icon-email-filled:before {
+    content: "\f10f";
+}
+.icon-eye-closed-filled:before {
+    content: "\f110";
+}
+.icon-eye-open-filled:before {
+    content: "\f111";
+}
+.icon-gray-arrow-left:before {
+    content: "\f112";
+}
+.icon-trash:before {
+    content: "\f113";
+}
+.icon-user-profile-group-filled:before {
+    content: "\f114";
+}
+.icon-users-profiles:before {
+    content: "\f115";
+}
+.icon-zip-error:before {
+    content: "\f116";
+}
+.icon-zip:before {
+    content: "\f117";
 }

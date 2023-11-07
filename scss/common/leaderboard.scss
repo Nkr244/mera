@@ -1,0 +1,104 @@
+.table-background {
+  background: $gray0;
+}
+
+.leaderboard {
+  margin-bottom: 100px;
+
+  h1 {
+    font-size: 45px;
+    font-weight: 500;
+    color: $blue;
+    margin-bottom: 20px;
+  }
+
+  &-content {
+    max-width: 670px;
+
+    .click-submit {
+      color: $blue;
+      font-weight: 600;
+    }
+
+    p {
+      color: $gray1;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid $gray5;
+    border-radius: 8px;
+  }
+
+  th {
+    position: relative;
+
+    &:nth-child(3) {
+      color: $black !important;
+    }
+
+    i {
+      position: absolute;
+      top: 2px;
+      right: -5px;
+      color: $gray3;
+    }
+
+    .icon-arrow-down {
+      top: auto;
+      bottom: 2px;
+    }
+  }
+
+  th, td {
+    padding: 16px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: bold;
+
+    &:nth-child(3) {
+      border-right: 1px solid $gray5;
+      font-weight: bold;
+      color: $gray1;
+    }
+  }
+
+  td {
+    font-weight: normal;
+    padding: 8px 16px;
+
+    &:first-child {
+      color: $gray1;
+    }
+
+    p {
+      text-align: start;
+      margin-bottom: 4px;
+      color: $blue;
+      font-weight: bold;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .sub-title {
+      font-size: 10px;
+      color: $gray2;
+      font-weight: normal;
+    }
+  }
+
+
+  th {
+    border-bottom: 1px solid $gray5;
+
+  }
+}
