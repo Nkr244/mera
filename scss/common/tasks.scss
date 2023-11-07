@@ -1,4 +1,7 @@
 .tasks {
+  &-header {
+    flex-wrap: wrap;
+  }
   .btn-download-all {
     position: relative;
     max-width: 217px;
@@ -28,5 +31,15 @@
   td:nth-child(3) {
     font-weight: normal;
     border-right: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .tasks {
+    &-header {
+      flex-direction: column;
+    }
+  }
+  .btn-download-all {
+    margin-bottom: 40px;
   }
 }

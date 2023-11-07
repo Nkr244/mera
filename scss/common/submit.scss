@@ -22,6 +22,7 @@
       font-weight: 500;
       position: relative;
       font-size: 16px;
+
       i {
         position: absolute;
         top: 50%;
@@ -31,34 +32,42 @@
       }
     }
   }
+
   .btn-delete,
   .btn-download {
     max-width: 126px;
-     i {
-       right: 15px !important;
-     }
+
+    i {
+      right: 15px !important;
+    }
   }
+
   .btn-delete {
     i {
       top: 47% !important;
       right: 10px !important;
+
       &:before {
         font-size: 28px !important;
       }
     }
   }
+
   .btn-edit {
+    max-width: 180px;
     i {
       top: 45% !important;
       right: 12px !important;
     }
 
   }
+
   .btn-public {
     display: block;
     max-width: 222px !important;
     padding-right: 120px !important;
     text-wrap: nowrap;
+
     i {
       right: 15px !important;
     }
@@ -78,8 +87,6 @@
       flex-basis: 60%;
 
       .leaderboard-table {
-        margin-bottom: 40px;
-
         &-second {
           .title-result {
             border-top: 1px solid $gray4;
@@ -161,6 +168,15 @@
       }
     }
 
+    &-item {
+      .leaderboard-table {
+        th:nth-child(3),
+        td:nth-child(3) {
+          border-right: none;
+        }
+      }
+    }
+
     &-item:last-child {
       flex-basis: 40%;
 
@@ -201,6 +217,7 @@
   }
 
 }
+
 .modal-delete,
 .modal-submit {
   .modal-content {
@@ -210,6 +227,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     h1 {
       font-size: 24px;
       color: $blue;
@@ -221,28 +239,33 @@
       margin-bottom: 20px;
       text-align: center;
     }
+
     i {
-      cursor:pointer;
+      cursor: pointer;
       color: $gray3;
       position: absolute;
-      top:10px;
+      top: 10px;
       right: 10px;
     }
+
     .btn {
       max-width: 190px;
       padding: 14px 65px;
       font-size: 16px;
       font-weight: 500;
     }
+
     .btn-delete {
       color: $black;
       background: $gray4;
     }
+
     .modal-button {
       gap: 10px;
     }
   }
 }
+
 .number {
   li {
     font-weight: bold;
@@ -267,4 +290,35 @@
   p:first-child {
     font-weight: bold !important;
   }
+}
+
+@media screen and (max-width: 850px) {
+  .submit {
+    .mobile-submit {
+      flex-direction: column;
+      .button-submit-header {
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+    }
+
+    &-content {
+      flex-direction: column;
+      &-item {
+        .submit-right-item {
+          font-size: 14px;
+        }
+        .mobile-leaderboard-first {
+          margin-bottom: 60px;
+        }
+        th, td {
+          font-size: 13px !important;
+        }
+        &:first-child {
+          order: 2;
+        }
+      }
+    }
+  }
+
 }

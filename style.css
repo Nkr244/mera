@@ -1304,8 +1304,6 @@ i:before {
 .leaderboard-table {
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid rgb(241, 241, 241);
-  border-radius: 8px;
 }
 .leaderboard th {
   position: relative;
@@ -1359,6 +1357,25 @@ i:before {
   border-bottom: 1px solid rgb(241, 241, 241);
 }
 
+.mobile-leaderboard {
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1070px) {
+  .leaderboard .mobile-leaderboard {
+    overflow-x: scroll;
+  }
+}
+@media screen and (max-width: 700px) {
+  .leaderboard h1 {
+    font-size: 24px;
+  }
+  .leaderboard-content p {
+    font-size: 14px;
+  }
+}
 .submit h1, .submit h2 {
   font-size: 30px;
   margin-bottom: 10px;
@@ -1402,6 +1419,9 @@ i:before {
 .submit .btn-delete i:before {
   font-size: 28px !important;
 }
+.submit .btn-edit {
+  max-width: 180px;
+}
 .submit .btn-edit i {
   top: 45% !important;
   right: 12px !important;
@@ -1426,9 +1446,6 @@ i:before {
 }
 .submit-content-item:first-child {
   flex-basis: 60%;
-}
-.submit-content-item:first-child .leaderboard-table {
-  margin-bottom: 40px;
 }
 .submit-content-item:first-child .leaderboard-table-second .title-result {
   border-top: 1px solid rgb(230, 230, 230);
@@ -1487,6 +1504,10 @@ i:before {
 .submit-content-item:first-child .leaderboard-table td:nth-child(3) {
   color: rgb(79, 77, 85);
   font-weight: normal;
+}
+.submit-content-item .leaderboard-table th:nth-child(3),
+.submit-content-item .leaderboard-table td:nth-child(3) {
+  border-right: none;
 }
 .submit-content-item:last-child {
   flex-basis: 40%;
@@ -1584,6 +1605,30 @@ i:before {
   font-weight: bold !important;
 }
 
+@media screen and (max-width: 850px) {
+  .submit .mobile-submit {
+    flex-direction: column;
+  }
+  .submit .mobile-submit .button-submit-header {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .submit-content {
+    flex-direction: column;
+  }
+  .submit-content-item .submit-right-item {
+    font-size: 14px;
+  }
+  .submit-content-item .mobile-leaderboard-first {
+    margin-bottom: 60px;
+  }
+  .submit-content-item th, .submit-content-item td {
+    font-size: 13px !important;
+  }
+  .submit-content-item:first-child {
+    order: 2;
+  }
+}
 .edit-submit-header {
   align-items: center;
   position: relative;
@@ -1607,6 +1652,7 @@ i:before {
 }
 
 .cookie {
+  display: none;
   position: absolute;
   bottom: 20px;
   right: 0;
@@ -1614,6 +1660,7 @@ i:before {
   background: rgb(248, 248, 248);
   padding: 20px 30px;
   border-radius: 8px;
+  z-index: 10000000000000;
 }
 .cookie i {
   position: absolute;
@@ -1644,6 +1691,14 @@ i:before {
   font-size: 16px;
 }
 
+@media screen and (max-width: 500px) {
+  .not-found {
+    padding: 20px 0 !important;
+  }
+}
+.tasks-header {
+  flex-wrap: wrap;
+}
 .tasks .btn-download-all {
   position: relative;
   max-width: 217px;
@@ -1674,6 +1729,14 @@ i:before {
   border-right: none;
 }
 
+@media screen and (max-width: 550px) {
+  .tasks-header {
+    flex-direction: column;
+  }
+  .btn-download-all {
+    margin-bottom: 40px;
+  }
+}
 .footer {
   padding: 100px 0 90px 0;
   background: #F9F9F9;

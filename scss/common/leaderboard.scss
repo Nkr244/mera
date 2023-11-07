@@ -33,8 +33,6 @@
   &-table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid $gray5;
-    border-radius: 8px;
   }
 
   th {
@@ -100,5 +98,31 @@
   th {
     border-bottom: 1px solid $gray5;
 
+  }
+}
+.mobile-leaderboard {
+   border: 1px solid $gray5;
+  border-radius: 15px;
+  overflow: hidden;
+
+}
+@media screen and (max-width: 1070px) {
+  .leaderboard {
+    .mobile-leaderboard {
+      overflow-x: scroll;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .leaderboard {
+    h1 {
+      font-size: 24px;
+    }
+    &-content {
+      p {
+        font-size: 14px;
+      }
+    }
   }
 }
