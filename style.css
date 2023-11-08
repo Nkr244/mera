@@ -1593,6 +1593,10 @@ i:before {
   margin-bottom: 0;
 }
 
+.mobile-leaderboard-first {
+  margin-bottom: 40px;
+}
+
 .p-number {
   color: rgb(79, 77, 85) !important;
 }
