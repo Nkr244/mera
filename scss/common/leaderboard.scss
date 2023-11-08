@@ -4,7 +4,21 @@
 
 .leaderboard {
   margin-bottom: 100px;
+  .mobile-scroll-explanation {
+    display: none;
+    margin-bottom: 12px;
+    p {
+      color: $gray1;
+    }
 
+    i {
+      margin: 0;
+      color: $gray3;
+      &:before {
+        font-size: 32px;
+      }
+    }
+  }
   h1 {
     font-size: 45px;
     font-weight: 500;
@@ -110,6 +124,9 @@
   .leaderboard {
     .mobile-leaderboard {
       overflow-x: scroll;
+    }
+    .mobile-scroll-explanation {
+      display: flex;
     }
   }
 }

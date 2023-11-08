@@ -43,25 +43,25 @@
             <div class="form-section">
                 <h2>Поля формы сабмита:</h2>
                 <label class="form-group">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" required>
                     <span class="form-label">Название команды</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" required>
                     <span class="form-label">Название сабмита</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" required>
                     <span class="form-label">Ссылка на ML модель</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" required>
                     <span class="form-label">Дополнительные ссылки (необязательное поле)</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <span class="help-circle"><p>В поле может быть ссылка на статью на arxiv, на хабр-пост о решении, на репозиторий, на Hugging Face</p></span>
@@ -71,7 +71,7 @@
             <div class="form-section">
                 <h2>Описание модели и её обучения:</h2>
                 <label class="form-group text-area">
-                    <textarea type="text" class="form-text-area"></textarea>
+                    <textarea type="text" class="form-text-area" required></textarea>
                     <span class="form-label">Описание архитектуры</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <span class="help-circle"><p>Указать архитектуру, кол-во параметров, training objective модели
@@ -81,21 +81,21 @@
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group text-area">
-                    <textarea type="text" class="form-text-area"></textarea>
+                    <textarea type="text" class="form-text-area" required></textarea>
                     <span class="form-label">Описание обучения</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <span class="help-circle"><p>Указать как обучали и запускали: был ли произведен fine-tune, был ли SFT, или это модель претрейна в формате zero-shot, и т. д.</p></span>
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group text-area">
-                    <textarea type="text" class="form-text-area"></textarea>
+                    <textarea type="text" class="form-text-area" required></textarea>
                     <span class="form-label">Данные претрейна</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <span class="help-circle"><p>Например: Обучались на 300GB открытых данных. Домены: новости, литература, нон-фикшен, юридические документы</p></span>
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group text-area">
-                    <textarea type="text" class="form-text-area"></textarea>
+                    <textarea type="text" class="form-text-area" required></textarea>
                     <span class="form-label">Детали обучения</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <span class="help-circle">
@@ -113,7 +113,7 @@
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group text-area">
-                    <textarea type="text" class="form-text-area"></textarea>
+                    <textarea type="text" class="form-text-area" required></textarea>
                     <span class="form-label">Лицензия</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <span class="help-circle"><p>MIT / Проприетарная модель</p></span>
@@ -123,7 +123,7 @@
             <div class="form-section">
                 <h2>Описание параметров на инференсе:</h2>
                 <label class="form-group text-area">
-                    <textarea type="text" class="form-text-area"></textarea>
+                    <textarea type="text" class="form-text-area" required></textarea>
                     <span class="form-label">Стратегия, генерация и параметры</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <span class="help-circle"><p>Header Укажите каким способом вы генерировали данные модели, стратегию генерации, top_p, top_k, и т. д.
@@ -131,7 +131,7 @@
                     <button class="form-clear"><i class="icon-close"></i></button>
                 </label>
                 <label class="form-group text-area">
-                    <textarea type="text" class="form-text-area" rows="150"></textarea>
+                    <textarea type="text" class="form-text-area" rows="150" required></textarea>
                     <span class="form-label">Комментарии об инференсе (необязательное поле)</span>
                     <span class="invalid-feedback">Превышено максимальное количество знаков — 2000</span>
                     <span class="help-circle">

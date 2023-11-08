@@ -1,8 +1,8 @@
 @font-face {
     font-family: "icons";
-    src: url("./icons.ttf?ef87b671c76a48b1ef806d5d5e6348ca") format("truetype"),
-url("./icons.woff?ef87b671c76a48b1ef806d5d5e6348ca") format("woff"),
-url("./icons.woff2?ef87b671c76a48b1ef806d5d5e6348ca") format("woff2");
+    src: url("./icons.ttf?023bcd471206b2672f6edd2b1f3f065d") format("truetype"),
+url("./icons.woff?023bcd471206b2672f6edd2b1f3f065d") format("woff"),
+url("./icons.woff2?023bcd471206b2672f6edd2b1f3f065d") format("woff2");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
@@ -71,24 +71,27 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-eye-open-filled:before {
     content: "\f112";
 }
-.icon-gray-arrow-left:before {
+.icon-finger:before {
     content: "\f113";
 }
-.icon-mdi_eye:before {
+.icon-gray-arrow-left:before {
     content: "\f114";
 }
-.icon-trash:before {
+.icon-mdi_eye:before {
     content: "\f115";
 }
-.icon-user-profile-group-filled:before {
+.icon-trash:before {
     content: "\f116";
 }
-.icon-users-profiles:before {
+.icon-user-profile-group-filled:before {
     content: "\f117";
 }
-.icon-zip-error:before {
+.icon-users-profiles:before {
     content: "\f118";
 }
-.icon-zip:before {
+.icon-zip-error:before {
     content: "\f119";
+}
+.icon-zip:before {
+    content: "\f11a";
 }
